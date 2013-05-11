@@ -1,0 +1,47 @@
+#include <stdio.h>
+//#include<conio.h>
+
+
+void reverse_string(char* start){
+
+  char* end = start;
+  char tmp;
+ 
+ // move the 'end' pointer to the last character
+    while ( *end)
+  {
+        	end++;
+         }
+          
+	end--;
+               
+      while( start < end )
+	{
+           tmp = *start;
+          *start = *end;
+          *end = tmp;
+           start++;
+           end--;
+        }
+  }
+
+
+      int main()
+	{
+
+            	//char a[] = "watermelon";
+                //char b[] = "fleamarket";
+		char str[]="";	 char  p;
+                printf("enter ur string\n");
+		scanf("%s",&str);
+	
+		printf("original string\t %s ",str);                            
+                //printf("original string\t %s \n",b);
+		//reverse_string(a);
+                reverse_string(str);
+
+          	printf("\nreversed string\t %s \n",str);
+               // printf("\nreversed string\t %s \n\n",b);
+
+                return 0;
+         }
